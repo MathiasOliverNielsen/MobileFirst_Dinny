@@ -103,6 +103,97 @@ header h1 {
 #mainNav ul:last-of-type li:last-of-type {
   background-color: #4b823f;
 }
+/* Modal Signin SignUp */
+/* === Modal Container === */
+.modal-auth-wrapper {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Hide modal by default */
+.modal-auth-wrapper[hidden] {
+  display: none;
+}
+
+/* Backdrop to detect outside click */
+.modal-auth-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+/* === Modal Box === */
+.modal-auth {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  z-index: 1000;
+  position: relative;
+}
+
+/* === Toggle Buttons === */
+.auth-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  background: #cf0b4c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-toggle button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+/* === Forms === */
+.auth-forms {
+  position: relative;
+}
+
+.auth-form {
+  display: none;
+  flex-direction: column;
+}
+
+.auth-form.active {
+  display: flex;
+}
+
+.auth-form h2 {
+  margin-bottom: 1rem;
+}
+
+.auth-form input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-form button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #cf0b4c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* #endregion */
 /* #region Main Content */
 /* #region About Dinny */
@@ -142,4 +233,89 @@ header h1 {
 }
 
 /* #endregion */
+/* #region Delivery */
+
+#delivery {
+  display: flex;
+  flex-direction: column;
+}
+#delivery img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+#delivery a {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  color: #ffffff78;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1rem;
+}
+/* #endregion */
+/* #region Gallery Dinny */
+
+#dinny-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  /* padding: 1rem; */
+}
+#dinny-gallery figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#dinny-gallery figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  font-size: 1rem;
+  background: #000000ab;
+  padding: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+#dinny-gallery figure:hover figcaption {
+  opacity: 1;
+}
+/* #endregion */
+/* #region Footer */
+#MainFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+iframe {
+  max-width: 500px;
+  height: 400px;
+}
+#MainFooter h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+/* #endregion */
+/* #endregion */
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
 /* #endregion */
